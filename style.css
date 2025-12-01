@@ -74,3 +74,23 @@ button:hover{
     display: flex;
     flex-wrap: wrap;
 }
+
+@media (min-width:400px) and (max-width:600px){
+    h1{
+        font-size: 24px;
+    }
+    h2{
+        font-size: 16px;
+    }
+    .box{
+        width: 204px;
+        height: 129px;
+    }
+    textarea{
+        width: 100%;
+    }
+    button{
+        margin: 50px 0px;
+    }
+    
+}
