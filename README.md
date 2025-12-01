@@ -1,2 +1,2 @@
 # TextToMorseCode
-Text to Morse Code Translator
+Simple website for translating text to morse code just for fun.
