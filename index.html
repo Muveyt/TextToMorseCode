@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ephesis&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+    <title>Morse Code</title>
+</head>
+
+<body>
+    <h1>Morse Code Encoder</h1>
+    <h2>Enter your message in the box below</h2>
+    <div class="container">
+        <div>
+        <form>
+            <textarea id="message" maxlength="50" minlength="5" placeholder="Enter a message..."></textarea>
+        </form>
+        </div>
+        <button onclick="translateToMorse()">Translate</button>
+        <h2>Morse Code of your message</h2>
+        <div class="box">
+            <p id="output"></p>
+        </div>
+    </div>
+
+
+    <script src="./index.js"></script>
+</body>
+</html>
