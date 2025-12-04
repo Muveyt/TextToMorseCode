@@ -5,6 +5,13 @@ body{
 
 p{
     margin-top: 0px;
+    color: white;
+    
+}
+
+#signature{
+    margin-top: 20px;
+    font-size: 20px;
 }
 
 h1{
@@ -38,9 +45,10 @@ textarea{
     text-align: start;
     resize: none;
     width: 400px;
-    height: 150px;
+    height: 160px;
     font-size: 18px;
     padding: 10px;
+    box-sizing: border-box;
 }
 
 button{
@@ -63,19 +71,18 @@ button:hover{
     border-radius: 10px;
     color: white;
     font-size: 18px;
-    height: 150px;
-    width: 400px;
+    height: 139px;
+    width: 374px;
     background-color: black;
-    margin-bottom: 10px;
     padding: 10px;
 }
 
-.box p{
+.box>p{
     display: flex;
     flex-wrap: wrap;
 }
 
-@media (min-width:250px) and (max-width:900px){
+@media (min-width:400px) and (max-width:600px){
     h1{
         font-size: 24px;
     }
@@ -94,5 +101,3 @@ button:hover{
     }
     
 }
-
-
