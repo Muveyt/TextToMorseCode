@@ -82,7 +82,7 @@ button:hover{
     flex-wrap: wrap;
 }
 
-@media (min-width:400px) and (max-width:600px){
+@media (min-width:350px) and (max-width:600px){
     h1{
         font-size: 24px;
     }
@@ -101,3 +101,4 @@ button:hover{
     }
     
 }
+
