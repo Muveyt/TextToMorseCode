@@ -20,3 +20,49 @@ function translateToMorse(){
     document.getElementById("output").textContent = morseCodeOutput;
 }
 
+
+async function playCode(frequency = 440){
+    var messageOutput = document.getElementById("output").textContent;
+
+    var speed = document.getElementById("speed").value;
+    console.log(speed);
+    console.log(messageOutput);
+    const audioCtx = new AudioContext();
+    const unit = speed;   // dot length in ms
+
+    const dot = unit;
+    const dash = unit * 3;
+    const gap = unit ;           // between elements of same letter
+    const letterGap = unit * 3; // between letters
+    const wordGap = unit * 3;
+    function beep(duration){
+    
+        const oscillator = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+        oscillator.frequency.value = frequency;
+        oscillator.connect(gain);
+        gain.connect(audioCtx.destination);
+
+        oscillator.start();
+        gain.gain.setValueAtTime(0.2, audioCtx.currentTime);
+        oscillator.stop(audioCtx.currentTime + duration / 1000 );
+
+        return new Promise(resolve => setTimeout(resolve, duration));
+        }
+    
+        for (i=0; i < messageOutput.length ;i++) {
+        if (messageOutput[i] == ".") {
+            await beep(dot);
+            await wait(gap);
+        } else if (messageOutput[i] == "_") {
+            await beep(dash);
+            await wait(gap);
+        } else if (messageOutput[i] == " ") {
+            await wait(wordGap);
+        }
+    }
+
+    function wait(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+    }
+}
