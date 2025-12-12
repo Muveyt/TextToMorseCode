@@ -15,11 +15,21 @@
     <h2>Enter your message in the box below</h2>
     <div class="container">
         <div>
-        <form>
-            <textarea id="message" maxlength="50" minlength="5" placeholder="Enter a message..."></textarea>
-        </form>
+            <form>
+                <textarea id="message" maxlength="50" minlength="1" placeholder="Enter a message..."></textarea>
+            </form>
         </div>
-        <button onclick="translateToMorse()">Translate</button>
+
+        <div id="buttons">
+            <button onclick="translateToMorse()">Translate</button>
+            <button onclick="playCode()">Play It &#9658</button>
+        </div>
+        
+        <div id="parameters">
+            <label>Speed</label>
+            <input type="number" id="speed" name="speed" min="25" max="500" value="50">
+        </div>
+
         <h2>Morse Code of your message</h2>
         <div class="box">
             <p id="output"></p>
@@ -27,8 +37,6 @@
         <p id="signature">&copyMade by Muveyt</p>
     </div>
 
-
     <script src="./index.js"></script>
 </body>
-
 </html>
